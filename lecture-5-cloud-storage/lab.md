@@ -10,7 +10,7 @@ Put into practice what lecture 5 "Cloud data storage" covered:
 - build a sound storage architecture as a mix of different types;
 - apply the selection checklist and avoid the common mistakes.
 
-The output is a justified data storage design for a notional online store, plus a project report.
+The output is a justified data storage design for your own service, plus a project report.
 
 ## 2. Format
 
@@ -21,15 +21,15 @@ The output is a justified data storage design for a notional online store, plus 
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design the data storage architecture for the same web application whose network you already designed (Lab 1).
+You are the DevOps engineer for the service you invented in [Lab 1](../lecture-1-introduction/lab.md). The customer asks you to design the data storage architecture for the same web application whose network you already designed (Lab 1).
 
 Customer requirements:
 
 | Service | Purpose | Storage specifics |
 | --- | --- | --- |
 | Web frontend | Public site + static content | Static assets (images, styles, scripts) served through a CDN, traffic spikes possible |
-| API backend | Order logic, catalogue | Runs on virtual machines, needs a fast system disk |
-| Database | Stores the catalogue and orders | High load, predictable latency is critical (IOPS), snapshots required |
+| API backend | The service's business logic | Runs on virtual machines, needs a fast system disk |
+| Database | Stores the service's main data | High load, predictable latency is critical (IOPS), snapshots required |
 | Shared directory | Content for several servers | Several servers must see one directory at the same time |
 | Backups and archive | Petabytes of backup copies | Multi-year retention at minimal cost, protection against accidental deletion |
 
@@ -72,7 +72,7 @@ Resilience and cost requirements:
 
 ### Stage 4. Storage architecture and security
 
-- Produce the final data storage diagram for "Book World" (a block diagram).
+- Produce the final data storage diagram for your service (a block diagram).
 - Go through the 6-question storage selection checklist and apply it to each kind of data.
 - Describe how redundancy is achieved: where EBS snapshots live, across how many zones EFS is spread, how S3 replicates objects between zones.
 

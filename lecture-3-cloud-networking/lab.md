@@ -10,7 +10,7 @@ Put into practice what lecture 3 "Cloud network architecture" covered:
 - apply the design checklist and avoid the common mistakes;
 - document the resulting network.
 
-The output is a working cloud network design for a notional online store, plus a project report.
+The output is a working cloud network design for your own service, plus a project report.
 
 ## 2. Format
 
@@ -21,15 +21,15 @@ The output is a working cloud network design for a notional online store, plus a
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World). The customer asks you to design and deploy the network architecture for a new web application.
+You are the DevOps engineer for the service you invented in [Lab 1](../lecture-1-introduction/lab.md). The customer asks you to design and deploy the network architecture for a new web application.
 
 Customer requirements:
 
 | Service | Purpose | Specifics |
 | --- | --- | --- |
-| Web frontend | The store's public site | HTTP/HTTPS, users across the whole region, static content must be cached |
-| API backend | Order logic, catalogue | REST API, paths /api/*, /orders/* |
-| Database | Stores the catalogue and orders | Must not be reachable from the internet |
+| Web frontend | The public part of the service | HTTP/HTTPS, users across the whole region, static content must be cached |
+| API backend | The service's business logic | REST API, paths /api/*, /orders/* |
+| Database | Stores the service's main data | Must not be reachable from the internet |
 | Internal services | Updates, telemetry | Must reach the internet outbound, but accept no inbound connections |
 
 Resilience requirements:

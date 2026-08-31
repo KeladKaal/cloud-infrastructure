@@ -10,7 +10,7 @@ Put into practice what lecture 9 "Cost management (FinOps)" covered:
 - apply optimization techniques (rightsizing, auto-scaling, intelligent tiering);
 - document the resulting cost model.
 
-The output is a working cost management model for a notional online store, plus a project report.
+The output is a working cost management model for your own service, plus a project report.
 
 > ⚠️ Important. The work is done in "calculator simulation" mode (Option A). All monetary figures are computed on an official pricing calculator (Yandex Cloud Pricing / AWS Pricing Calculator). No real money is spent. In the cloud console, on a free (trial) account, only one demonstration VM is created — to practise tagging, budgeting and monitoring.
 
@@ -24,15 +24,15 @@ The output is a working cost management model for a notional online store, plus 
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design a cost management model for new cloud infrastructure services.
+You are the DevOps engineer for the service you invented in [Lab 1](../lecture-1-introduction/lab.md). The customer asks you to design a cost management model for new cloud infrastructure services.
 
 Customer requirements:
 
 | Service | Purpose | Load profile |
 | --- | --- | --- |
-| Web frontend | The store's public site | Steady baseline load + peaks during sales hours |
-| API backend | Order logic, catalogue | Load proportional to the frontend, peak periods |
-| Database | Stores the catalogue and orders | Runs 24/7 without stopping |
+| Web frontend | The public part of the service | Steady baseline load + peaks during sales hours |
+| API backend | The service's business logic | Load proportional to the frontend, peak periods |
+| Database | Stores the service's main data | Runs 24/7 without stopping |
 | Test environment | Development and QA | Working hours only, available irregularly |
 | Object storage | Static content, backups, old files | Rare access to old data, frequent access to new |
 

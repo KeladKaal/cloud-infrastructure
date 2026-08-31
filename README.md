@@ -50,4 +50,6 @@ The rules live in [`AGENTS.md`](AGENTS.md) (and `CLAUDE.md` for Claude Code). Mo
 
 ## License
 
-© 2026 KeladKaal. Licensed under [CC BY-NC 4.0](LICENSE). Free to reuse and adapt for **non-commercial** purposes with **attribution**.
+This course was created jointly by two instructors; the materials belong to their authors.
+
+© 2026 KeladKaal and the course co-author. Licensed under [CC BY-NC 4.0](LICENSE). Free to reuse and adapt for **non-commercial** purposes with **attribution**.

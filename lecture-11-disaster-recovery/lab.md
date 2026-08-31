@@ -10,7 +10,7 @@ Put into practice what lecture 11 "Disaster recovery and resilience" covered:
 - set up automation (backups, failover, restore) and run a chaos experiment;
 - document the resulting DR strategy.
 
-The output is a working recovery strategy for a notional online store, plus a project report.
+The output is a working recovery strategy for your own service, plus a project report.
 
 ## 2. Format
 
@@ -21,15 +21,15 @@ The output is a working recovery strategy for a notional online store, plus a pr
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design a disaster recovery strategy and make the web application resilient (the services from Lab 1).
+You are the DevOps engineer for the service you invented in [Lab 1](../lecture-1-introduction/lab.md). The customer asks you to design a disaster recovery strategy and make the web application resilient (the services from Lab 1).
 
 Acceptable per-service figures (RPO/RTO):
 
 | Service | Purpose | RPO | RTO |
 | --- | --- | --- | --- |
-| Web frontend | The store's public site | Up to 5 min | Up to 15 min |
-| API backend | Order logic, catalogue | Up to 5 min | Up to 15 min |
-| Database | Stores the catalogue and orders | Up to 15 min | Up to 30 min |
+| Web frontend | The public part of the service | Up to 5 min | Up to 15 min |
+| API backend | The service's business logic | Up to 5 min | Up to 15 min |
+| Database | Stores the service's main data | Up to 15 min | Up to 30 min |
 
 Additional customer requirements:
 

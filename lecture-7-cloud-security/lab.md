@@ -22,15 +22,15 @@ The output is a hardened cloud environment for a notional service, plus a securi
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). After the network architecture was deployed (Lab 1), the customer asks you to secure that cloud environment.
+You are the DevOps engineer for the service you invented in [Lab 1](../lecture-1-introduction/lab.md). After the network architecture from Lab 1 was deployed, the customer asks you to secure that cloud environment.
 
 The following infrastructure components are available to design against:
 
 | Component | Purpose | Security requirement |
 | --- | --- | --- |
-| Web frontend | The store's public site | HTTPS (TLS 1.2/1.3), protection against L7 attacks (SQLi, XSS) |
-| API backend | Order logic, catalogue | Access only from the internal network, IAM roles with minimal rights |
-| Database | Stores the catalogue and orders | Not reachable from the internet, encryption at rest, secret in a vault |
+| Web frontend | The public part of the service | HTTPS (TLS 1.2/1.3), protection against L7 attacks (SQLi, XSS) |
+| API backend | The service's business logic | Access only from the internal network, IAM roles with minimal rights |
+| Database | Stores the service's main data | Not reachable from the internet, encryption at rest, secret in a vault |
 | Internal services | Backups, telemetry, CI/CD | A service account with roles, key rotation, secrets in a manager |
 | S3 bucket | Stores static content and artifacts | Object encryption, a narrowly scoped access policy |
 
