@@ -5,7 +5,7 @@
 Labs come in two kinds:
 
 - **hands-on** — labs 2, 4, 6, 8, 10, 12 (you stand the system up yourself, locally);
-- **design** — labs 3, 5, 7, 9, 11 (you design and justify an architecture).
+- **design** — labs 3, 5, 7, 9, 11 (you design and justify an architecture). Lectures 13 and 14 belong to this half too, but their materials are still in preparation.
 
 ## What is the same in both halves
 
@@ -50,7 +50,7 @@ The same holds for lectures: "lecture No. 1" in the author's text is lecture 3 o
 The points below are not settled yet. They don't stop you from starting, but they affect how work will be accepted.
 
 - [ ] **A single submission format.** Either bring both halves to one medium (e.g. everyone submits a folder or a repository, with the report inside as `README.md` or an attached `.pdf`), or deliberately keep the two.
-- [ ] **A single grading scale**, and how 11 labs add up to a final course grade.
+- [ ] **A single grading scale**, and how all the labs add up to a final course grade.
 - [ ] **Deadlines and late work.** Due dates and what happens if you're late — currently written down nowhere.
 - [ ] **Resubmission.** Whether work can be fixed up after feedback, and how many times.
 - [ ] **Cloud accounts.** Which provider is the default, who pays for resources, what students without AWS access should do, and whether resources really have to be created — or a design on paper is enough.
@@ -58,6 +58,7 @@ The points below are not settled yet. They don't stop you from starting, but the
 - [ ] **Where labs are done.** The design labs are written for class time (2 academic hours); for the hands-on labs this isn't specified anywhere. Both need to be reconciled with the timetable so the workload stays even.
 - [ ] **AI policy for the design labs.** They largely consist of filling in tables and answering questions — exactly what an assistant does in a minute. We need to decide what demonstrates the work is the student's own: a defense, oral questions, or something else.
 - [ ] **Report format with diagrams.** Lab 7 asks for Mermaid diagrams, but submission is `.docx`, where Mermaid doesn't render. Either the report moves to Markdown, or the diagrams are submitted as images.
+- [ ] **The title of lecture 14.** The programme calls it "Cloud databases", but the outline items are about DDoS protection. Clarify with the author what the lecture will cover.
 - [ ] **The name of the course.** The repository calls it "Cloud Infrastructure"; the original lecture texts call it "Organization and management of cloud infrastructure".
 - [ ] **The running example.** Design labs follow the "Book World" online store, hands-on labs follow a grocery delivery service. Decide whether to unify them.
 
