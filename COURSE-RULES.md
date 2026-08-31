@@ -55,7 +55,7 @@ The points below are not settled yet. They don't stop you from starting, but the
 - [ ] **Resubmission.** Whether work can be fixed up after feedback, and how many times.
 - [ ] **Cloud accounts.** Which provider is the default, who pays for resources, what students without AWS access should do, and whether resources really have to be created — or a design on paper is enough.
 - [ ] **Pair work.** Whether it is allowed in the hands-on labs, and how each person's contribution is assessed.
-- [ ] **Where labs are done.** Design labs assume class time, hands-on labs assume homework; this needs to be reconciled with the timetable so the workload stays even.
+- [ ] **Where labs are done.** The design labs are written for class time (2 academic hours); for the hands-on labs this isn't specified anywhere. Both need to be reconciled with the timetable so the workload stays even.
 - [ ] **AI policy for the design labs.** They largely consist of filling in tables and answering questions — exactly what an assistant does in a minute. We need to decide what demonstrates the work is the student's own: a defense, oral questions, or something else.
 - [ ] **Report format with diagrams.** Lab 7 asks for Mermaid diagrams, but submission is `.docx`, where Mermaid doesn't render. Either the report moves to Markdown, or the diagrams are submitted as images.
 - [ ] **The name of the course.** The repository calls it "Cloud Infrastructure"; the original lecture texts call it "Organization and management of cloud infrastructure".
