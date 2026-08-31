@@ -2,9 +2,9 @@
 
 ## Scenario
 
-You stand up and protect the **team's internal GitLab** — the center of the whole development platform. You'll go through the entire path from the lecture, but not on a toy example — on a real system: you'll set up **single sign-on** into the internal tools, put **nginx as a boundary** in front of GitLab, and configure **CI/CD with static and dynamic runners**. On top of it all — the mandatory **monitoring**.
+You stand up and protect the **internal GitLab of the team building your service** from [Lab 1](../lecture-1-introduction/lab.md) — the center of the whole development platform. You'll go through the entire path from the lecture, but not on a toy example — on a real system: you'll set up **single sign-on** into the internal tools, put **nginx as a boundary** in front of GitLab, and configure **CI/CD with static and dynamic runners**. On top of it all — the mandatory **monitoring**.
 
-The small service the pipeline will build, you write yourself (you can generate it with AI) — it's only there as the object that travels through the conveyor. Everything else is the devops infrastructure around GitLab, and that's the learning part.
+The service the pipeline will build is one of your project's subsystems — the same API-backend stub from lab 2 will do. You don't need to write it again, but the pipeline must build that one. Everything else is the devops infrastructure around GitLab, and that's the learning part.
 
 You deploy everything **however you prefer** (`docker compose` or Kubernetes) and **through configuration**. Manual commands inside containers only where there's no other way, and you note that in the README.
 
@@ -69,6 +69,8 @@ If the chosen system doesn't expose metrics in Prometheus format itself — set 
 2. **`README.md`** — how you set up single sign-on into GitLab and Grafana via Keycloak (realm, client); the nginx config (reverse proxy, TLS and the **access rules**); how you registered the static and dynamic runners and what you saw under load (the static vs dynamic conclusion); your dashboard and the rationale for the 3 alert metrics.
 3. **Your configs** — whatever brought it all up (Docker configuration / Helm values / manifests), the nginx config, the Keycloak realm export (if you did one).
 4. **Screenshots**: the Keycloak login screen when signing into GitLab and Grafana, a zone locked down with nginx (access denied from outside), the pipeline with jobs on different runners, dynamic runners or pods under load, the monitoring dashboard.
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-10/` folder, and its write-up as its own section in `report.md`.
 
 ## How to start
 

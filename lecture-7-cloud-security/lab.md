@@ -1,16 +1,8 @@
 # Lab 7 — Cloud infrastructure security
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
->
-> **Numbering.** For the author this is lab No. 3, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
->
-> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
-
----
-
 ## 1. Goal
 
-Put into practice what lecture No. 3 "Cloud infrastructure security" covered:
+Put into practice what lecture 7 "Cloud infrastructure security" covered:
 
 - apply the Shared Responsibility model (the split of responsibility between provider and customer);
 - set up access management (IAM): roles, policies, service accounts, the principle of least privilege;
@@ -25,12 +17,12 @@ The output is a hardened cloud environment for a notional service, plus a securi
 
 | Parameter | Value |
 | --- | --- |
-| Working mode | Individually or in a pair (2–3 people) |
-| Submission | A report in `.md` + schematics and policies |
+| Working mode | Individually or in a pair (1–2 people) |
+| Submission | A report in Markdown (`.md`) committed to a git repository, + a schematic file |
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World). After the network architecture was deployed (lab No. 1), the customer asks you to secure that cloud environment.
+You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). After the network architecture was deployed (Lab 1), the customer asks you to secure that cloud environment.
 
 The following infrastructure components are available to design against:
 
@@ -154,11 +146,11 @@ In the conclusion, state which tool to pick for a pure AWS stack and which for a
 
 ### Stage 6. Writing up the report
 
-Fill in the report using the template (section 5), attach the diagrams and the self-check list (section 6).
+Fill in the report using the template from Lab 1.
 
 ## 5. Report
 
-Write the report in the following structure (as a text document).
+The report must include:
 
 ### 5.1. The Shared Responsibility model
 
@@ -221,15 +213,3 @@ Answered orally at the defense or in writing at the end of the report.
 - How does a Security Group differ from a Network ACL (stateful vs stateless)?
 - What is a WAF and which application-level attacks does it protect against?
 - Lay out the order in which traffic passes through WAF → NACL → Security Group.
-
-## 8. Grading criteria
-
-| Points | Criterion |
-| --- | --- |
-| 1 | The Shared Responsibility model is built correctly (the boundary is the hypervisor) |
-| 1 | The IAM policy is written correctly with the principle of least privilege |
-| 1 | Secrets are moved into a vault, rotation is configured and access is restricted |
-| 1 | Encryption in-transit and at-rest is configured via KMS (envelope encryption) |
-| 1 | Multi-layer network protection is implemented (WAF + NACL + SG) |
-| 1 | The diagrams are produced and the report is written up |
-| 6 | Maximum total |

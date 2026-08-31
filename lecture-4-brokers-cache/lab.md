@@ -2,11 +2,9 @@
 
 ## The situation
 
-A developer comes to you, the devops engineer:
+Your service from [Lab 1](../lecture-1-introduction/lab.md) almost certainly has an action that **doesn't have to happen during the user's request**: a placed order has to be picked, an uploaded video transcoded, an application sent for processing, a payment settled. Things like that get decoupled through a broker.
 
-> "I have two services — a user service and a picker service. The user creates orders, the picker has to receive and process them. I need Kafka between them. Please set it up and configure it."
-
-The services aren't written yet — you write them. And then — this is the main part — **you stand up and configure Kafka for them from scratch** and check how it behaves in different situations.
+Take **two services from your own architecture** — the one that produces the event and the one that handles it — and put **Kafka** between them. You write the services yourself (you can generate them with AI), and then — this is the main part — **you stand up and configure Kafka for them from scratch** and check how it behaves in different situations.
 
 ## Part 1 — Write the two services
 
@@ -78,6 +76,8 @@ The tool is up to you.
 2. **`README.md`** — how you stood up Kafka, Kafka UI and the services **through configuration**; what you changed in each situation (config edits) and what you observed (explained via lecture concepts); your dashboard and the rationale for the 3 alert metrics.
 3. **Your configs** — whatever you used to stand up and configure everything (Helm values / manifests / Docker configuration).
 4. **Screenshots**: both service pages, Kafka UI (topic, partitions, lag, reset offsets), the monitoring dashboard.
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-4/` folder, and its write-up as its own section in `report.md`.
 
 ## How to start
 

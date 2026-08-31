@@ -2,11 +2,13 @@
 
 ## Goal
 
-Build a small simple service (write or generate it) and stand up **full monitoring for it: metrics, logs and traces**. Metrics and logs go in **Grafana**, traces separately in **Jaeger**. That's all three pillars of observability on your own service.
+Take **one service from your own architecture** — the one you designed in [Lab 1](../lecture-1-introduction/lab.md) — and stand up **full monitoring for it: metrics, logs and traces**. Metrics and logs go in **Grafana**, traces separately in **Jaeger**. That's all three pillars of observability on a service of your own.
 
-## Part 1 — A small service with buttons
+## Part 1 — A stub of your service
 
-Sketch (or generate — the code isn't the point) a simple HTTP service with a page and three buttons, so you can trigger different situations yourself:
+Pick the subsystem of your architecture that handles user requests — usually the **API backend**. Sketch (or generate — the code isn't the point) a simple stub of it: an HTTP page with three buttons, so you can trigger different situations yourself.
+
+**Name the endpoints after your own domain** (`/orders`, `/tracks`, `/deals` — whatever your service is about): then the dashboard shows your system, not an abstract test case.
 
 - **"Cause an error"** — the endpoint returns an error (5xx) and increments the error counter.
 - **"Cause a delay"** — the endpoint responds slowly (e.g. sleeps 1–3 seconds).
@@ -74,6 +76,8 @@ Three sides here: how the service *emits* traces, how Jaeger is *configured*, an
 2. **Configs** — whatever you used to stand up the stack (Prometheus + alert rules, Alertmanager, Grafana, Loki/Promtail, Jaeger/OTel; `docker compose` or Helm manifests).
 3. **`README.md`** — what you stood up and how, which metrics are on the dashboard and why, the rationale for the 3 alerts.
 4. **Screenshots**: the metrics dashboard (Grafana), logs in Grafana, a trace waterfall in Jaeger (delay and error), the firing alerts in Alertmanager.
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-2/` folder, and its write-up as its own section in `report.md`.
 
 ## How to start
 

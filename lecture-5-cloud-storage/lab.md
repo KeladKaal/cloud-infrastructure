@@ -1,16 +1,8 @@
 # Lab 5 — Cloud storage (Block, File, Object: choosing and applying)
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
->
-> **Numbering.** For the author this is lab No. 2, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
->
-> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
-
----
-
 ## 1. Goal
 
-Put into practice what lecture No. 2 "Cloud data storage" covered:
+Put into practice what lecture 5 "Cloud data storage" covered:
 
 - tell the three cloud storage types apart — Block, File and Object — and understand their levels;
 - choose and apply the EBS, EFS and S3 services (and their equivalents at other providers);
@@ -24,12 +16,12 @@ The output is a justified data storage design for a notional online store, plus 
 
 | Parameter | Value |
 | --- | --- |
-| Working mode | Individually or in a pair (2–3 people) |
-| Submission | A report in `.md` + a schematic (as an image or a Mermaid diagram) |
+| Working mode | Individually or in a pair (1–2 people) |
+| Submission | A report in Markdown (`.md`) committed to a git repository, + a schematic file |
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World). The customer asks you to design the data storage architecture for the same web application whose network you already designed (lab work No. 1).
+You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design the data storage architecture for the same web application whose network you already designed (Lab 1).
 
 Customer requirements:
 
@@ -50,6 +42,7 @@ Resilience and cost requirements:
 ## 4. Assignment and steps
 
 ### Stage 1. The three storage types and a comparison
+
 - Justify which of the three types (Block, File, Object) suits each service in the customer's table, and fill in the comparison table for the three AWS services — EBS, EFS, S3 (template in the "Report" section).
 - State the pattern: how performance and cost change going from Block to Object.
 - Fill in the table of EBS, EFS and S3 equivalents at Yandex Cloud, VK Cloud, Azure and Google Cloud.
@@ -69,6 +62,7 @@ Resilience and cost requirements:
 **Checkpoint 2:** the database isn't on object storage, the shared directory isn't on a block disk, and archives get cheaper via the lifecycle.
 
 ### Stage 3. S3 storage classes and lifecycle
+
 - Fill in the table of S3 storage classes from "hot" to "cold" (Standard, Intelligent-Tiering, Standard-IA, Glacier, Glacier Deep Archive): purpose, access speed, cost.
 - Write a lifecycle rule for backups: after how many days an object moves to Standard-IA, after how many to Glacier. Justify the savings.
 - Describe how S3 Select and Glacier Select work (SQL queries inside an object) and what they are for.
@@ -86,11 +80,11 @@ Resilience and cost requirements:
 
 ### Stage 5. Writing up the report
 
-Fill in the report using the template (section 5), attach the storage diagram and the self-check list (section 6).
+Fill in the report using the template from Lab 1.
 
 ## 5. Report
 
-Write the report in the following structure:
+The report must include:
 
 ### 5.1. Comparison of the three services
 
@@ -168,15 +162,3 @@ What you took away, which mistakes you avoided, what was new to you.
 - How do S3 Select and Glacier Select make working with data easier?
 - Name the equivalents of EBS, EFS and S3 in Yandex Cloud and VK Cloud.
 - State the storage selection rule in one sentence.
-
-## 8. Grading criteria
-
-| Points | Criterion |
-| --- | --- |
-| 1 | A correct comparison table of storage types is provided, along with the "level → performance → price" pattern |
-| 1 | Database and VMs: the EBS volume type (gp3 / io2) is chosen correctly and snapshots are planned (in the region) |
-| 1 | Storage is chosen and configured correctly for static content (S3 + CDN), the shared directory (EFS) and root disks |
-| 1 | A backup and archive scheme is in place: storage classes, lifecycle, versioning |
-| 1 | A mixed architecture and redundancy are thought through (snapshots, many zones, S3 replication) |
-| 1 | A data storage diagram is produced and the report is written up |
-| 6 | Maximum total |

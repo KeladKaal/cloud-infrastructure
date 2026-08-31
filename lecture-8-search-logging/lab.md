@@ -4,7 +4,7 @@
 
 Run Elasticsearch + Kibana locally, load application logs, learn to search and aggregate over them, work through shards, replicas and cluster status, and set up a minimal rotation (ILM + rollover). All local, with a demonstration that it works.
 
-There is a single scenario — **application logs**: the case DevOps most often sets Elasticsearch up for.
+There is a single scenario — **the logs of your own application** from [Lab 1](../lecture-1-introduction/lab.md): the case DevOps most often sets Elasticsearch up for.
 
 ---
 
@@ -67,6 +67,8 @@ Put everything in a folder and submit:
 1. **`README.md`** — what you did, the key commands and configs (index mapping, ILM policy), how to run it, and the rationale for the 3 chosen alert metrics.
 2. **Launch configs** — whatever you used to bring up ELK (`docker-compose.yml` or Kubernetes manifests).
 3. **Screenshots** of the key moments: cluster status, a search result, an aggregation/visualization in Kibana, the list of indices after rollover, and the **3 monitoring graphs**.
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-8/` folder, and its write-up as its own section in `report.md`.
 
 ---
 

@@ -12,7 +12,7 @@ This lab pulls together everything from the lecture: agents, tools, toolkit, ski
 
 Pick a process that a devops engineer could automate to make life easier — either **for everyone in the company**, or **for one group** (e.g. developers, testers, support).
 
-You also get to invent the setting: **describe the company, the project and the people** who work there. It can be anything — a startup or a bigtech, a B2B SaaS or an open-source package, whatever you like. The only rule: both the project and the automation should **sound realistic**.
+You already have the setting — the company and the project from [Lab 1](../lecture-1-introduction/lab.md) that you have been building all semester. Describe **the people who work there** and which of them the automation makes life easier for. The only rule: both the process and the automation should **sound realistic** for your service.
 
 Write a short description (½ page is enough):
 - **Who** it helps (all employees / a specific group).
@@ -70,6 +70,8 @@ Put everything in a folder named after your use-case and submit:
 2. **The exported n8n workflow** (JSON).
 3. **AI skills** — the documented know-how your agent follows (in what order it acts and by what rules).
 4. **3 monitoring graphs** (screenshots).
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-12/` folder, and its write-up as its own section in `report.md`.
 
 ---
 

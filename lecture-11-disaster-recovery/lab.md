@@ -1,16 +1,8 @@
 # Lab 11 — Building a disaster recovery strategy and ensuring resilience
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
->
-> **Numbering.** For the author this is lab No. 5, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
->
-> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
-
----
-
 ## 1. Goal
 
-Put into practice what lecture No. 5 "Disaster recovery and resilience" covered:
+Put into practice what lecture 11 "Disaster recovery and resilience" covered:
 
 - calculate and assign target resilience metrics (RPO, RTO, SLO);
 - choose and justify a disaster recovery model for a specific service;
@@ -24,12 +16,12 @@ The output is a working recovery strategy for a notional online store, plus a pr
 
 | Parameter | Value |
 | --- | --- |
-| Working mode | Individually or in a pair (2–3 people) |
-| Submission | A report in `.md` + a schematic (as an image or a Mermaid diagram) |
+| Working mode | Individually or in a pair (1–2 people) |
+| Submission | A report in Markdown (`.md`) committed to a git repository, + a schematic file |
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World). The customer asks you to design a disaster recovery strategy and make the web application resilient (the services from lab work No. 1).
+You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design a disaster recovery strategy and make the web application resilient (the services from Lab 1).
 
 Acceptable per-service figures (RPO/RTO):
 
@@ -69,7 +61,7 @@ Additional customer requirements:
 
 ### Stage 3. Designing Multi-AZ / Multi-Region
 
-- Design the target architecture based on the diagram from lab work No. 1, placing the critical services in two regions.
+- Design the target architecture based on the diagram from Lab 1, placing the critical services in two regions.
 - Configure database replication: Multi-AZ (synchronous) in the primary region and cross-region replication (asynchronous) for the standby.
 - Provide for a failover policy to the standby region.
 - Draw a block diagram (mermaid / diagramming tool): primary region + standby, availability zones, database replicas, gateways and load balancers, failover points.
@@ -96,7 +88,7 @@ Additional customer requirements:
 
 ### Stage 6. Writing up the report
 
-Fill in the report using the template (section 5), attach the architecture diagram and the self-check list (section 6).
+Fill in the report using the template from Lab 1.
 
 ## 5. Report
 
@@ -163,15 +155,3 @@ Answered orally at the defense or in writing at the end of the report.
 - How does automatic failover affect meeting the target RTO?
 - Which chaos experiment scenario would you run first, and why?
 - What happens to the service if both regions are unavailable at once, and how should the DR plan account for that?
-
-## 8. Grading criteria
-
-| Points | Criterion |
-| --- | --- |
-| 1 | RPO/RTO are calculated correctly and the target RTO is broken into its parts |
-| 1 | A DR model is chosen and justified for every service |
-| 1 | A Multi-AZ/Multi-Region architecture and database replication are designed |
-| 1 | Automation is configured (backups, failover, recovery runbook) |
-| 1 | A chaos experiment was run and the result and weak spots are analysed |
-| 1 | A diagram is produced and the report is written up |
-| 6 | Maximum total |

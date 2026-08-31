@@ -2,7 +2,9 @@
 
 ## Scenario
 
-You have a small service that **writes records to a database and reads them back** — the topic is up to you (notes, products, posts, sensor readings — anything). Reads are growing, and to avoid loading the main database, the reading part is moved to a **replica**. Your task is to stand up replication, connect the service to it, and then see live what the lecture was about: **replica lag (replication lag)**, its link to the **CAP theorem**, and what happens when the **primary fails (failover)**.
+The architecture you designed in [Lab 1](../lecture-1-introduction/lab.md) has a database — the one that lives in the data subnet and doesn't face the internet. Time to stand it up.
+
+The service writes its records to that database (products, tracks, deals, applications — whatever your own application deals in) and reads them back. Reads are growing, and to avoid loading the main database, the reading part is moved to a **replica**. Your task is to stand up replication, connect the service to it, and then see live what the lecture was about: **replica lag (replication lag)**, its link to the **CAP theorem**, and what happens when the **primary fails (failover)**.
 
 You write the service yourself (you can generate it with AI) — it's simple and only exists so you can see the database's behavior. The main, learning part is the devops work **around** the database: replication, failover and monitoring.
 
@@ -92,6 +94,8 @@ The tooling is up to you.
 2. **`README.md`** — which database you chose and why; how you stood up replication **through configuration**; what you observed in parts 3 and 5 (lag and failover) explained through the lecture's concepts; your **CAP** reasoning (part 4); your dashboard and the rationale for the 3 alert metrics.
 3. **Your configs** — whatever brought it all up (Docker configuration / Helm values / manifests).
 4. **Screenshots**: the service page, the moment with the reading lag, the state after failover, the monitoring dashboard.
+
+Put everything into the **same git repository** you created in [Lab 1](../lecture-1-introduction/lab.md): this lab's work in a `lab-6/` folder, and its write-up as its own section in `report.md`.
 
 ## How to start
 

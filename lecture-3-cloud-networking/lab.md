@@ -1,16 +1,8 @@
 # Lab 3 — Designing a cloud network (VPC, load balancers, connectivity)
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
->
-> **Numbering.** For the author this is lab No. 1, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
->
-> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
-
----
-
 ## 1. Goal
 
-Put into practice what lecture No. 1 "Cloud network architecture" covered:
+Put into practice what lecture 3 "Cloud network architecture" covered:
 
 - design a virtual private cloud (VPC) spanning several availability zones;
 - choose and configure a load balancer for a specific service;
@@ -98,6 +90,7 @@ Work out which load balancers the services in the table need, and configure them
 **Checkpoint 3:** check that the database is open only to the API backend, not to everyone.
 
 ### Stage 5. Writing up the report
+
 Fill in the report using the template (section 5), attach the network diagram and the self-check list (section 6).
 
 ## 5. Report

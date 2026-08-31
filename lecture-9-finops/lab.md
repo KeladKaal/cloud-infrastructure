@@ -1,16 +1,8 @@
 # Lab 9 — Cloud cost management (FinOps): pricing, cost allocation, optimization
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
->
-> **Numbering.** For the author this is lab No. 4, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
->
-> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
-
----
-
 ## 1. Goal
 
-Put into practice what lecture No. 4 "Cost management (FinOps)" covered:
+Put into practice what lecture 9 "Cost management (FinOps)" covered:
 
 - choose and justify a pricing model for different kinds of workload (On-Demand, Reserved, Spot);
 - organize cost allocation using tags and projects;
@@ -26,13 +18,13 @@ The output is a working cost management model for a notional online store, plus 
 
 | Parameter | Value |
 | --- | --- |
-| Working mode | Individually or in a pair (2–3 people) |
-| Submission | A report in `.md` + a calculation table |
+| Working mode | Individually or in a pair (1–2 people) |
+| Submission | A report in Markdown (`.md`) committed to a git repository, + a schematic file |
 | Note | Simulation: no real money is spent, all prices come from the calculator |
 
 ## 3. Inputs (the problem statement)
 
-You are a DevOps engineer at the online bookstore "Книжный мир" (Book World). The customer asks you to design a cost management model for new cloud infrastructure services.
+You are a DevOps engineer at the online bookstore "Книжный мир" (Book World) (you could invent the company and what it does yourself, or pick from the list in Lab 1). The customer asks you to design a cost management model for new cloud infrastructure services.
 
 Customer requirements:
 
@@ -102,12 +94,13 @@ Budget and cost management requirements:
 **Checkpoint 5.** Check that every optimization decision comes with a calculation from the calculator.
 
 ### Stage 6. Writing up the report
-- Fill in the report using the template (section 5), attach the calculation tables, the screenshots of the demo VM and the budget, and the self-check list (section 6).
+
+- Fill in the report using the template from Lab 1, attach the calculation tables, the screenshots of the demo VM and the budget, and the self-check list (section 6).
 - Be sure to delete the demonstration VM at the end of the work and record that in the report.
 
 ## 5. Report
 
-Write the report in the following structure (as a text document):
+The report must include:
 
 ### 5.1. Justification of the pricing model choices
 
@@ -186,15 +179,3 @@ Answered orally at the defense or in writing at the end of the report.
 - What is the danger of a "forgotten" test VM left running overnight on On-Demand?
 - Why is cost allocation a prerequisite for any optimization?
 - Where in this work was the calculator simulation used, and where was it real practice on a free account? Why is this approach safe for the budget?
-
-## 8. Grading criteria
-
-| Points | Criterion |
-| --- | --- |
-| 1 | A pricing model is chosen and justified correctly for every service |
-| 1 | The cost calculation was done on the calculator, the amounts match, savings are computed |
-| 1 | All resources are tagged and the role of tags in cost allocation is explained |
-| 1 | A budget with threshold alerts is configured and the screenshot is attached |
-| 1 | Optimization (rightsizing, auto-scaling, tiering) is justified and calculated |
-| 1 | The demo VM is deleted, the report and checklist are filled in, conclusions are drawn |
-| 6 | Maximum total |
