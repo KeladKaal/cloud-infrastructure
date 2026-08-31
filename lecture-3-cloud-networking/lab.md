@@ -1,10 +1,10 @@
 # Lab 3 — Designing a cloud network (VPC, load balancers, connectivity)
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English; the content is unchanged.
+> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
 >
 > **Numbering.** For the author this is lab No. 1, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
 >
-> **Note: the submission rules here are different.** The assignment asks for a .docx/.pdf report, pair work and a 6-point score — that is the co-instructor's format for the second half of the course. Labs in the first half are submitted differently. What applies on this course is in [Course rules](../COURSE-RULES.md); until that is agreed, check the submission format with your instructor.
+> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
 
 ---
 
@@ -25,9 +25,7 @@ The output is a working cloud network design for a notional online store, plus a
 | Parameter | Value |
 | --- | --- |
 | Working mode | Individually or in a pair (2–3 people) |
-| Time | 2 academic hours (80 minutes) |
-| Environment | A cloud console (AWS / Yandex Cloud / VK Cloud) or a diagramming tool |
-| Submission | A report file in .docx or .pdf + a schematic file |
+| Submission | A report in `.md` + a schematic (as an image or a Mermaid diagram) |
 
 ## 3. Inputs (the problem statement)
 
@@ -99,8 +97,7 @@ Work out which load balancers the services in the table need, and configure them
 
 **Checkpoint 3:** check that the database is open only to the API backend, not to everyone.
 
-### Stage 5. Writing up the report (10 minutes)
-
+### Stage 5. Writing up the report
 Fill in the report using the template (section 5), attach the network diagram and the self-check list (section 6).
 
 ## 5. Report

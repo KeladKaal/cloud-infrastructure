@@ -1,10 +1,10 @@
 # Lab 9 — Cloud cost management (FinOps): pricing, cost allocation, optimization
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English; the content is unchanged.
+> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
 >
 > **Numbering.** For the author this is lab No. 4, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
 >
-> **Note: the submission rules here are different.** The assignment asks for a .docx/.pdf report, pair work and a 6-point score — that is the co-instructor's format for the second half of the course. Labs in the first half are submitted differently. What applies on this course is in [Course rules](../COURSE-RULES.md); until that is agreed, check the submission format with your instructor.
+> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
 
 ---
 
@@ -27,9 +27,7 @@ The output is a working cost management model for a notional online store, plus 
 | Parameter | Value |
 | --- | --- |
 | Working mode | Individually or in a pair (2–3 people) |
-| Time | 2 academic hours (80 minutes) |
-| Environment | A pricing calculator (Yandex Cloud / AWS) + a free console for the demo VM |
-| Submission | A report file in .docx or .pdf + a calculation table |
+| Submission | A report in `.md` + a calculation table |
 | Note | Simulation: no real money is spent, all prices come from the calculator |
 
 ## 3. Inputs (the problem statement)
@@ -103,8 +101,7 @@ Budget and cost management requirements:
 
 **Checkpoint 5.** Check that every optimization decision comes with a calculation from the calculator.
 
-### Stage 6. Writing up the report (remaining time)
-
+### Stage 6. Writing up the report
 - Fill in the report using the template (section 5), attach the calculation tables, the screenshots of the demo VM and the budget, and the self-check list (section 6).
 - Be sure to delete the demonstration VM at the end of the work and record that in the report.
 

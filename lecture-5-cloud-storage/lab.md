@@ -1,10 +1,10 @@
 # Lab 5 — Cloud storage (Block, File, Object: choosing and applying)
 
-> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English; the content is unchanged.
+> 👥 **Lab by the co-instructor.** Below is the author's original assignment, translated into English. The content is unchanged: only the time and place of work and the per-stage durations were removed — those are set by the timetable, not by the assignment.
 >
 > **Numbering.** For the author this is lab No. 2, and the text refers to their own numbers. Mapping: No. 1 → Lab 3, No. 2 → Lab 5, No. 3 → Lab 7, No. 4 → Lab 9, No. 5 → Lab 11.
 >
-> **Note: the submission rules here are different.** The assignment asks for a .docx/.pdf report, pair work and a 6-point score — that is the co-instructor's format for the second half of the course. Labs in the first half are submitted differently. What applies on this course is in [Course rules](../COURSE-RULES.md); until that is agreed, check the submission format with your instructor.
+> **Submission is in Markdown.** Everything on this course is submitted the same way: the report as an `.md` file, schematics as an image or a Mermaid diagram. Details in [Course rules](../COURSE-RULES.md).
 
 ---
 
@@ -25,9 +25,7 @@ The output is a justified data storage design for a notional online store, plus 
 | Parameter | Value |
 | --- | --- |
 | Working mode | Individually or in a pair (2–3 people) |
-| Time | 2 academic hours (80 minutes) |
-| Environment | A cloud console (AWS / Yandex Cloud / VK Cloud) or a diagramming tool |
-| Submission | A report file in .docx or .pdf + a schematic file |
+| Submission | A report in `.md` + a schematic (as an image or a Mermaid diagram) |
 
 ## 3. Inputs (the problem statement)
 
@@ -51,8 +49,7 @@ Resilience and cost requirements:
 
 ## 4. Assignment and steps
 
-### Stage 1. The three storage types and a comparison (15 minutes)
-
+### Stage 1. The three storage types and a comparison
 - Justify which of the three types (Block, File, Object) suits each service in the customer's table, and fill in the comparison table for the three AWS services — EBS, EFS, S3 (template in the "Report" section).
 - State the pattern: how performance and cost change going from Block to Object.
 - Fill in the table of EBS, EFS and S3 equivalents at Yandex Cloud, VK Cloud, Azure and Google Cloud.
@@ -71,8 +68,7 @@ Resilience and cost requirements:
 
 **Checkpoint 2:** the database isn't on object storage, the shared directory isn't on a block disk, and archives get cheaper via the lifecycle.
 
-### Stage 3. S3 storage classes and lifecycle (15 minutes)
-
+### Stage 3. S3 storage classes and lifecycle
 - Fill in the table of S3 storage classes from "hot" to "cold" (Standard, Intelligent-Tiering, Standard-IA, Glacier, Glacier Deep Archive): purpose, access speed, cost.
 - Write a lifecycle rule for backups: after how many days an object moves to Standard-IA, after how many to Glacier. Justify the savings.
 - Describe how S3 Select and Glacier Select work (SQL queries inside an object) and what they are for.

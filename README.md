@@ -27,7 +27,7 @@ Fourteen lectures. Click a lecture to see what's inside.
 | 11 | [Disaster recovery and resilience](lecture-11-disaster-recovery/) 👥 | RPO/RTO, DR models, Multi-AZ and Multi-Region, chaos engineering |
 | 12 | [AI infrastructure](lecture-12-ai-infrastructure/) | agents, tools, MCP, n8n, hosting and cost |
 | 13 | [Serverless and event-driven architectures](lecture-13-serverless-event-driven/) 👥 | FaaS, event buses, state machines ⏳ |
-| 14 | [Cloud databases](lecture-14-cloud-databases/) 👥 | DDoS protection, WAF, monitoring and response ⏳ |
+| 14 | [Protection from DDoS and network attacks](lecture-14-ddos-protection/) 👥 | AWS Shield, WAF, Anycast/CDN, monitoring and response ⏳ |
 
 👥 — lectures and labs by the course's co-instructor. ⏳ — materials still in preparation; only the topic outline is published so far. The labs are translated into English; **the lecture texts are still in the author's original Russian** and are kept unchanged, diagrams included.
 
@@ -38,9 +38,9 @@ Every lecture has a lab except the introductory one. For lectures 13 and 14 the 
 The two halves of the course work differently, and that is deliberate:
 
 - **Labs 2, 4, 6, 8, 10, 12** — hands-on: you stand the system up yourself, **locally and for free** (Docker / `docker compose` or Kubernetes, whichever you prefer), configure it and show that it works. You submit a repository with configs, a README and screenshots. **Mandatory in every one of these labs — monitoring:** decide yourself which metrics go on the dashboard, and pick **3 metrics you'd build alerts on**, with a rationale.
-- **Labs 3, 5, 7, 9, 11** (and, most likely, 13 and 14) — design: you design and justify an architecture in a cloud console or a diagramming tool, fill in calculation tables and submit a report with a schematic.
+- **Labs 3, 5, 7, 9, 11** (and, most likely, 13 and 14) — design: you design and justify an architecture, fill in calculation tables and submit a report with a schematic.
 
-⚠️ **Submission and report rules currently differ between these two halves** — down to the file format and the grading scheme. What differs and what applies is in [Course rules](COURSE-RULES.md). Read it before your first submission.
+**Everything is submitted the same way — in Markdown:** the report as an `.md` file, schematics and diagrams as images or Mermaid blocks. Grading, the defense and whether monitoring is mandatory do still differ between the two halves — see [Course rules](COURSE-RULES.md). Read it before your first submission.
 
 ## Running examples
 
