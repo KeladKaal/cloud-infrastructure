@@ -5,19 +5,23 @@
 Put the fundamentals of cloud network architecture into practice:
 
 - design a virtual private cloud (VPC) spanning several availability zones;
-- choose and configure a load balancer for a specific service;
+- choose and design a load balancer for a specific service;
 - provide connectivity between subnets and the outside world (IGW, NAT);
 - apply the design checklist and avoid the common mistakes;
 - document the resulting network.
 
-The output is a **working cloud network design** for a service you invent, plus a **report** on the project.
+The output is a **cloud network design** for a service you invent, plus a **report** on the project.
+
+> **Important: a single format for the whole lab.** This lab is carried out as a design on a diagram. No resources are created or configured in a real cloud environment, and no service is run. Wherever this lab says "configure", "deploy" or "enable", it means: **design, describe and record** the configuration on the diagram and in the report.
 
 ## 2. Format
 
 | Parameter | Value |
 | --- | --- |
 | Working mode | Individually or in a pair (1–2 people) |
+| Environment | A diagramming tool (draw.io / Mermaid / etc.); no real cloud console is used |
 | Submission | A report in Markdown (`.md`) committed to a git repository, + a schematic file |
+| Running the service | Not done — only the network topology is designed |
 
 ## 3. Inputs (the problem statement)
 
@@ -31,7 +35,7 @@ You are a DevOps engineer. Invent the company and what it does yourself, or pick
 - a SaaS product for teamwork (messenger / task tracker);
 - your own option (agree it with the instructor).
 
-The customer asks you to design and deploy the network architecture for a new web application.
+The customer asks you to design the network architecture for a new web application.
 
 In the report (section 3), describe your service using this template:
 
@@ -80,11 +84,11 @@ In the report (section 3), describe your service using this template:
 
 ### Stage 2. Load balancers
 
-- Work out which load balancers your project's services need, and configure them.
-- For the public services, choose the load balancer type and configure the routing rules: your application's paths (for example `/api/*`, `/orders/*` → the API server group; all other traffic → the frontend/static group).
+- Work out which load balancers your project's services need, and design their configuration (type, layer, placement, rules and strategy — on the diagram and in the table).
+- For the public services, choose the load balancer type and describe the routing rules: your application's paths (for example `/api/*`, `/orders/*` → the API server group; all other traffic → the frontend/static group).
 - Justify your choice of load balancer through the layer it operates at (L4 or L7).
-- For each load balancer configure a health check and write down the distribution strategy (Round Robin, Least Connections, etc.) you picked and why.
-- If raw TCP is needed for database replication — think through which load balancer would be required, though you don't have to configure it (note it in the report).
+- For each load balancer set the health check parameters and write down the distribution strategy (Round Robin, Least Connections, etc.) you picked and why.
+- If raw TCP is needed for database replication — think through which load balancer would be required, and note it in the report (as part of the design).
 
 > 💡 Hint: "need to see the HTTP content — that's an ALB (L7); need speed and ports — that's an NLB (L4)".
 
@@ -92,20 +96,20 @@ In the report (section 3), describe your service using this template:
 
 ### Stage 3. Connectivity with the outside world
 
-- Configure the **Internet Gateway** for the public subnets.
-- Deploy a **NAT Gateway** for the private and data subnets. Mandatory — **one in every availability zone**. Justify why this is needed (Single Point of Failure).
+- Design the **Internet Gateway** for the public subnets.
+- Design a **NAT Gateway** for the private and data subnets. Mandatory — **one in every availability zone**. Justify why this is needed (Single Point of Failure).
 - Describe (in the report text) how you would set up the primary and backup links to the company's on-premise data centre, if it existed (Direct Connect + Site-to-Site VPN).
 - State how to make the connection redundant so that the network keeps working when one link goes down.
 
 ### Stage 4. Security and logging
 
-- Describe which **Security Groups** (stateful) you would create for:
+- Describe which **Security Groups** (stateful) you would design for:
 - the web frontend;
 - the API backend;
 - the database;
 - the NAT Gateway.
 - State which **inbound/outbound rules** you would set (ports, sources/destinations).
-- Enable **VPC Flow Logs** and explain what they are for and what they let you detect.
+- Describe how you would set up **VPC Flow Logs** and explain what they are for and what they let you detect.
 
 **Checkpoint 3:** check that the database is open only to the API backend, not to everyone.
 
@@ -206,13 +210,13 @@ Go through the list and tick every item:
 - ☐ Subnets: at least one in each of the three availability zones (public + private + data).
 - ☐ Routing: public → IGW, private → NAT/Endpoints.
 - ☐ Load balancer chosen correctly by layer (L4/L7) — justified in the report.
-- ☐ Health checks configured for all server groups.
+- ☐ Health checks are described for all server groups.
 - ☐ NAT Gateway in every availability zone (no SPOF).
 - ☐ The database is not in a public subnet and is reachable only by the API backend.
-- ☐ VPC Flow Logs are enabled.
+- ☐ Setting up VPC Flow Logs is described.
 - ☐ Link redundancy is described (Direct Connect + Site-to-Site VPN).
 - ☐ The network diagram and route documentation are attached.
-- ☐ Resources (if a real cloud environment was used) have been deleted after the work.
+- ☐ The design is recorded on the diagram and in the report's tables (no real resources were created in a cloud).
 
 ## 7. Review questions (after the work)
 
